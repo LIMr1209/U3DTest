@@ -11,6 +11,7 @@ namespace DefaultNamespace
         {
             point = transform.TransformDirection(new Vector3(10, 0, 0));
             origin = transform.InverseTransformDirection(point);
+            Debug.Log(origin);
         }
 
         private void Update()
