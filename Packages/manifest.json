@@ -1,5 +1,16 @@
-{
+{  
+  "scopedRegistries" : [
+    {
+      "name" : "OpenUPM",
+      "url" : "https://package.openupm.com",
+      "scopes" : [
+        "com.atteneder"
+      ]
+    }
+  ],
   "dependencies": {
+    "com.atteneder.ktx" : "2.0.0",
+    "com.atteneder.draco" : "4.0.2",
     "com.system-community.systemruntimecompilerservicesunsafe": "https://github.com/system-community/SystemRuntimeCompilerServicesUnsafe.git?path=Assets/_Root#6.0.0",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "1.15.15",
