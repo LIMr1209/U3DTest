@@ -11,6 +11,7 @@ namespace DefaultNamespace
         public static ChildrenBounds instance;
         private List<GltfImportTask> _tasks = new List<GltfImportTask>();
         public GameObject bubble;
+        public GameObject cube;
         public Bounds bounds;
         public Bounds bubblebounds;
 
@@ -30,18 +31,24 @@ namespace DefaultNamespace
             {
                 float d = bubble.GetComponent<MeshRenderer>().bounds.size.x;
                 float dimensions = (float)(d / Math.Sqrt(3)); // 正方体对角线公式计算正方体尺寸
-                bubblebounds = new Bounds(bubble.transform.position, new Vector3(dimensions, dimensions, dimensions));
-                gameObject.transform.SetParent(bubble.transform, false);
-                // 泡泡尺寸
-                bounds = GetMaxBounds2(gameObject);
-                float maxD = Math.Max(bounds.size.x, bounds.size.y);
-                float maxDis = Math.Max(bounds.size.z, maxD);    
-                float proportion = dimensions / maxDis;
-                gameObject.transform.localScale = new Vector3(proportion, proportion, proportion);
-                bounds = GetMaxBounds2(gameObject);
-                gameObject.transform.position -= bounds.center - gameObject.transform.position;
-                bounds = GetMaxBounds2(gameObject);
-                Debug.Log(111);
+                Debug.Log(cube.GetComponent<MeshRenderer>().bounds.size.x);
+                cube.transform.SetParent(bubble.transform, false);
+                float loadingBaseDimensions = cube.GetComponent<MeshRenderer>().bounds.size.x;
+                Debug.Log(loadingBaseDimensions);
+                // float loadingDimensions = dimensions / loadingBaseDimensions ;
+                // cube.transform.localScale *= loadingDimensions;
+                // bubblebounds = new Bounds(bubble.transform.position, new Vector3(dimensions, dimensions, dimensions));
+                // gameObject.transform.SetParent(bubble.transform, false);
+                // // 泡泡尺寸
+                // bounds = GetMaxBounds2(gameObject);
+                // float maxD = Math.Max(bounds.size.x, bounds.size.y);
+                // float maxDis = Math.Max(bounds.size.z, maxD);    
+                // float proportion = dimensions / maxDis;
+                // gameObject.transform.localScale = new Vector3(proportion, proportion, proportion);
+                // bounds = GetMaxBounds2(gameObject);
+                // gameObject.transform.position -= bounds.center - gameObject.transform.position;
+                // bounds = GetMaxBounds2(gameObject);
+                // Debug.Log(111);
             });
         }
 
