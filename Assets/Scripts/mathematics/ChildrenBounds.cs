@@ -1,4 +1,6 @@
-﻿using System;
+﻿// 加载gltf 自适应放到球体内部
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Piglet;
