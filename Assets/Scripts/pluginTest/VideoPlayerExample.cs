@@ -5,11 +5,11 @@ using UnityEngine.Video;
 public class VideoPlayerExample : MonoBehaviour
 {
     private Texture _texture;
-    private GameObject camera;
+    private GameObject _camera;
     void Start()
     {
-        camera = GameObject.Find("Plane");
-        var videoPlayer = camera.AddComponent<VideoPlayer>();
+        _camera = GameObject.Find("Plane");
+        var videoPlayer = _camera.AddComponent<VideoPlayer>();
 
         videoPlayer.playOnAwake = false;
 

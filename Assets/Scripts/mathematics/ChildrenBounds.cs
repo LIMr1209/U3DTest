@@ -31,6 +31,8 @@ namespace DefaultNamespace
             
             AddGltfTask(uri, (gameObject) =>
             {
+                MeshMerge meshMerge = gameObject.AddComponent<MeshMerge>();
+                meshMerge.Merge(gameObject);
                 float d = bubble.GetComponent<MeshRenderer>().bounds.size.x;
                 float dimensions = (float)(d / Math.Sqrt(3)); // 正方体对角线公式计算正方体尺寸
                 Debug.Log(cube.GetComponent<MeshRenderer>().bounds.size.x);

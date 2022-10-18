@@ -6,13 +6,13 @@ namespace DefaultNamespace
     public class TestOtherGUI : MonoBehaviour
     {
         public Rect area = new Rect(1, 1, 100, 20);
-        public float scrollLength = 1.0f; 
-        private string text = "This is a textField";
-        private bool toggle = false;
-        private int toolbar = 1;
-        private float slider = 3.0f;
-        Vector2 scrollPosition = Vector2.zero;
-        private Rect scrollArea = new Rect(0, 0, 220, 200);
+        // public float scrollLength = 1.0f; 
+        // private string text = "This is a textField";
+        // private bool toggle = false;
+        // private int toolbar = 1;
+        // private float slider = 3.0f;
+        // Vector2 scrollPosition = Vector2.zero;
+        // private Rect scrollArea = new Rect(0, 0, 220, 200);
 
         private void OnGUI()
         {
