@@ -29,6 +29,7 @@ Shader "Unity Shaders Book/Chapter 6/ Diffuse Pixel-Level"
             struct v2f
             {
                 float4 pos: SV_POSITION;
+                // 通常，如果我们需要把一些自定义的数据从顶点着色器传递给片元着色器，一般选用TEXCOORD0等。
                 float3 worldNormal: TEXCOORD0;
             };
 

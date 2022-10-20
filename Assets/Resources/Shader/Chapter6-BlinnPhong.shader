@@ -32,7 +32,7 @@ Shader "Unity Shaders Book/Chapter 6/Blinn Phong"
             {
                 float4 pos : SV_POSITION;
                 float3 worldNormal: TEXCOORD0;
-                fixed3 worldPos: TEXCOORD1;
+                float3 worldPos: TEXCOORD1;
             };
 
             v2f vert(a2v v)
